@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="layar-dalam">
+        <div class="logo">
+          <a href=""><img src="logo.png" /></a>
+        </div>
+        <div class="menu">
+          <a href="#" class="tombol-menu">
+            <span class="garis"></span>
+          </a>
+          <ul>
+            <li style=" font-size: 50px;"><a href="#home">Beranda</a></li>
+            <li style=" font-size: 50px;"><a href="#aboutus">About us</a></li>
+            <li style=" font-size: 50px;"><a href="menu.html">Menu</a></li>
+            <li style=" font-size: 50px;"><a href="#team">Tim</a></li>
+            <li style=" font-size: 50px;"><a href="Lokasi.html">Lokasi</a></li>
+            <li style=" font-size: 50px;"><a href="formReservasi.html">Reservasi</a></li>
+            <li style=" font-size: 50px;"><a href="FormKritik&Saran.html">Kritik&Saran</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="layar-penuh">
+      <header id="home">
+        <div class="overlay"></div>
+        <video autoplay muted loop>
+          <source src="video.mp4" type="video/mp4" />
+        </video>
+        <div class="intro">
+          <h3>NANA'S LOVE NEST CAFE</h3>
+          <p>
+            "Tempat berhenti, rasa yang berlanjut"
+          
+          </p>
+          <p>
+            <a href="#aboutus" class="tombol"> INFO</a>
+
+          </p>
+        </div>
+      </header>
+      <main>
+        <section id="aboutus">
+          <div class="layar-dalam">
+            <h3>SELAMAT DATANG</h3>
+            <p class="ringkasan">
+              Mimpi tentang secangkir kopi hangat di Nana's Love Nest Cafe
+            </p>
+            <div class="konten-isi">
+              <p style="font-style: italic; font-size: 20px; text-align: center;">
+                Pemiliknya mendukung seniman dan musisi lokal, sering kali mengadakan acara musik live dan seni di cafe,
+                Memiliki konsep modern dan minimalis, dengan dekorasi yang sederhana namun elegan.
+                Suasana cafe ini sangat nyaman dan santai menjadikannya tempat yang ideal untuk bersantai dan menikmati waktu bersama teman dan keluarga, serta
+                Para koki menyiapkan makanan lezat di dapur kecil, menggunakan bahan-bahan lokal berkualitas tinggi
+              </p>
+            </div>
+          </div>
+        </section>
+     
+        <section id="gallery">
+          <div >
+            <img src="foto1.jpg"/>
+          
+            </div>
+        <div style>
+            <img src="foto2.jpg"/>
+        </div>
+        <div style>
+            <img src="foto3.jpg"/>
+        </div>
+        <div style>
+            <img src="foto4.jpg"/>
+        </div>
+        <div style>
+            <img src="foto5.jpg"/>
+        </div>
+         
+          
+        </section>
+        <section class="quote">
+          <div class="layar-dalam">
+            <p> Cafe yang menawarkan suasana santai dan nyaman</p>
+          </div>
+        </section>
+        <section id="team">
+          <div class="layar-dalam">
+            <h3> Tim </h3>
+            <p class="ringkasan">
+              Kami selalu bekerja sama 
+            </p>
+            <div class="tim">
+              <div>
+                <img src="tim1.jpg" />
+                <h6>Avrilindo</h6>
+                <span>Staf</span>
+              </div>
+              <div>
+                <img src="tim2.jpg" />
+                <h6>Nana</h6>
+                <span>Staf</span>
+              </div>
+              <div>
+                <img src="tim3.jpg" />
+                <h6>Tegar</h6>
+                <span>Staf</span>
+              </div>
+            </div>
+          </div>
+        </section>
+       <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rating Cafe</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h2 { text-align: center; }
+    .stars i { font-size: 30px; color: #ccc; cursor: pointer; }
+    .stars i.active { color: orange; }
+    textarea, input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; background: orange; border: none; border-radius: 5px; color: white; cursor: pointer; }
+    .review { background: #f9f9f9; padding: 10px; margin: 10px 0; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Berikan Rating Cafe Kami</h1>
+  <input type="text" id="nama" placeholder="Nama Anda">
+  <div class="stars" id="starRating">
+    <i class="star" data-value="1">&#9733;</i>
+    <i class="star" data-value="2">&#9733;</i>
+    <i class="star" data-value="3">&#9733;</i>
+    <i class="star" data-value="4">&#9733;</i>
+    <i class="star" data-value="5">&#9733;</i>
+  </div>
+  <textarea id="komentar" placeholder="Komentar Anda..."></textarea>
+  <button onclick="kirimRating()">Kirim</button>
+</div>
+
+<div class="container">
+  <h2>Review Terbaru</h2>
+  <div id="reviewList"></div>
+</div>
+
+<script>
+  let rating = 0;
+
+  // event klik bintang
+  document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('click', () => {
+      rating = star.dataset.value;
+      document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+      for (let i = 0; i < rating; i++) {
+        document.querySelectorAll('.star')[i].classList.add('active');
+      }
+    });
+  });
+
+  function kirimRating() {
+    const nama = document.getElementById('nama').value.trim();
+    const komentar = document.getElementById('komentar').value.trim();
+    
+    if (!nama || !rating || !komentar) {
+      alert("Mohon lengkapi semua data.");
+      return;
+    }
+
+    tambahReview(nama, rating, komentar);
+
+    // Reset form
+    document.getElementById('nama').value = "";
+    document.getElementById('komentar').value = "";
+    rating = 0;
+    document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+  }
+
+  function tambahReview(nama, rating, komentar) {
+    const reviewList = document.getElementById('reviewList');
+    const stars = "⭐".repeat(rating);
+
+    const reviewItem = document.createElement('div');
+    reviewItem.className = 'review';
+    reviewItem.innerHTML = `<strong>${nama}</strong> (${stars})<br>${komentar}`;
+
+    // Review baru muncul di paling atas
+    reviewList.prepend(reviewItem);
+  }
+</script>
+
+</body>
+</html>
+        </section>
+      </main>
+      <footer id="contact">
+        <div class="layar-dalam">
+          <div>
+            <h5>Info</h5>
+            Buka setiap senin sampai dengan sabtu Jam 8am-12pm
+            minggu libur
+          </div>
+          <div>
+            <h5>Layanan</h5>
+          Mengutamakan Kepuasan Pelanggan
+          </div>
+        </div>
+          <!-- Pastikan Font Awesome sudah di-include di <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Media Sosial Horizontal -->
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+  <a href="https://wa.me/6281216910928" target="_blank" style="color: white;">
+    <i class="fab fa-whatsapp fa-2x"></i>
+  </a>
+  <a href="https://instagram.com/_nanahn" target="_blank" style="color: white;">
+    <i class="fab fa-instagram fa-2x"></i>
+  </a>
+  <a href="https://tiktok.com/@itss.nnn" target="_blank" style="color: white;">
+    <i class="fab fa-tiktok fa-2x"></i>
+  </a>
+  <a href="https://facebook.com/Iyowess" target="_blank" style="color: white;">
+    <i class="fab fa-facebook fa-2x"></i>
+  </a>
+  <a href="mailto:Nanaslovenest@gmail.com" style="color: white;">
+    <i class="fas fa-envelope fa-2x"></i>
+  </a>
+</div>
+        <div class="layar-dalam">
+          <div class="copyright">&copy; 2025 Nana's Love Nest Cafe</div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

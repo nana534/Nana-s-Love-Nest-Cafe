@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Kritik&Saran</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 400px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.2);}
+        h2 { text-align: center; }
+        label { display: block; margin-top: 10px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; width: 100%; padding: 10px; background: orange; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Kritik&Saran</h2>
+    <form id="kritikForm">
+        <label>Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label>No. Telepon:</label>
+        <input type="text" id="telepon" required>
+
+        <label>Isi Kritik&Saran:</label>
+        <textarea id="pesan" rows="5" required></textarea>
+
+        <button type="button" onclick="kirimWhatsApp()">Kirim</button>
+    </form>
+</div>
+
+<script>
+    function kirimWhatsApp() {
+        let nama = document.getElementById("nama").value;
+        let telepon = document.getElementById("telepon").value;
+        let pesanIsi = document.getElementById("pesan").value;
+
+        let pesan = `Halo Admin,%0ASaya ingin menyampaikan kritik & saran:%0A- Nama: ${nama}%0A- No. Telp: ${telepon}%0A- Pesan: ${pesanIsi}`;
+        let nomorWA = "6281216910928"; // Ganti dengan nomor WA admin
+
+        window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+    }
+</script>
+</body>
+</html>

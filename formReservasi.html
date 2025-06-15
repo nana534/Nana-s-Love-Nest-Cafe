@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Reservasi</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 400px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.2);}
+        h2 { text-align: center; }
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; width: 100%; padding: 10px; background: blue; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Form Reservasi</h2>
+    <form id="reservasiForm">
+        <label>Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label>No. Telepon:</label>
+        <input type="text" id="telepon" required>
+
+        <label>Tanggal Reservasi:</label>
+        <input type="date" id="tanggal" required>
+
+        <label>Jumlah Orang:</label>
+        <input type="number" id="orang" required>
+
+        <button type="button" onclick="kirimWhatsApp()">Reservasi</button>
+    </form>
+</div>
+
+<script>
+    function kirimWhatsApp() {
+        let nama = document.getElementById("nama").value;
+        let telepon = document.getElementById("telepon").value;
+        let tanggal = document.getElementById("tanggal").value;
+        let orang = document.getElementById("orang").value;
+
+        let pesan = `Halo Admin,%0ASaya ingin reservasi:%0A- Nama: ${nama}%0A- No. Telp: ${telepon}%0A- Tanggal: ${tanggal}%0A- Jumlah Orang: ${orang}`;
+        let nomorWA = "6281216910928"; // Ganti dengan nomor WA admin
+
+        window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+    }
+</script>
+</body>
+</html>
